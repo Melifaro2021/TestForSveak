@@ -1,0 +1,214 @@
+/* вложенный контейнер */
+.flex-box, .flex-box20{
+	background-color: #ECF0F1;  /*#7dbeff; #c8e5d2; цвет */ 
+	margin: 5px;      			/* Внешний отступ */
+}
+.flex-box{    
+	height: 700px;	/* высота	*/
+					/*  width: 700px; ширина */  
+} 
+.flex-box20{    
+	height: 20px;	/* высота	*/
+	width: 20px;	/* ширина */  
+	border: 1px solid #000;	
+} 
+
+/* родительский Flex-контейнер */
+/* главная ось main-x, поперечная ось across-y*/
+.mx-start,  		  .mx-start-ay-center,   .mx-end-ay-start,     
+.mx-center, 		  .mx-center-ay-center,  .mx-end-ay-center,  
+.mx-start-ay-end,	  .mx-center-ay-end,     .mx-end-ay-end,        
+.mx-start-ay-between, .mx-center-ay-between, .mx-between-ay-end,
+.mx-start-ay-around,  .mx-center-ay-around,  .mx-around-ay-end,
+/* главная ось y, поперечная ось x*/
+.my-start-ax-start,   .my-start-ax-center,   .my-start-ax-end,
+.my-center-ax-start,  .my-center-ax-center,  .my-center-ax-end,
+.my-end-ax-start,     .my-end-ax-center,     .my-end-ax-end,
+.my-between-ax-start, .my-between-ax-center, .my-between-ax-end,
+.my-around-ax-start,  .my-around-ax-center,  .my-around-ax-end{
+	display: flex; 				/* родительский Flex-контейнер */
+	flex-wrap: 	wrap; 			/* элементы переносятся на новую строку при необходимости */ 
+	width: 120px; 				/* ширина */			
+	height: 120px;				/* высота */
+	background-color: #BDC3C7;  /* цвет  #defee9*/ 
+	border: 1px solid #000;     /* граница */
+}
+
+/* Далее смотрим пример расположения элементов на экране построчно */
+/*--------------- СТРОКА 1 --------------------------*/
+/* 1 */ 
+.mx-start{  
+	align-items: flex-start;  /* по Y вначале */
+}
+/* 2 */
+.mx-start-ay-center { 
+	justify-content: center;  /* по X горизонтали в центре */
+	align-items: flex-start;  /* по Y вертикали вначале */ 
+} 
+/* 3 */
+.mx-end-ay-start { 
+	justify-content: end;/* по X в конце */
+	align-items: start;  /* по Y вначале */ 
+}  
+/*--------------- СТРОКА 2 --------------------------*/
+/* 4 */
+.mx-center { 
+	align-items: center;  /* по Y вцентре */ 
+} 
+/* 5 */
+.mx-center-ay-center { 
+	justify-content: center; /* по X в центре */
+	align-items: center;  /* по Y вцентре */ 
+}
+/* 6 */
+.mx-end-ay-center { 
+	justify-content: end; /* по X в конце */
+	align-items: center;  /* по Y вцентре */ 
+}   
+/*--------------- СТРОКА 3 --------------------------*/
+/* 7 */
+.mx-start-ay-end { 
+	justify-content: flex-start;  /* по X в начале */
+	align-items: flex-end;  /* по Y вконце */ 
+} 
+/* 8 */
+.mx-center-ay-end { 
+	justify-content: center; /* по X в вцентре */
+	align-items: flex-end;  /* по Y вконце */ 
+}
+/* 9 */
+.mx-end-ay-end { 
+	justify-content: flex-end; /* по X в конце */
+	align-items: flex-end;  /* по Y вконце */ 
+} 
+/*--------------- СТРОКА 4 --------------------------*/
+/* 10 */
+.mx-start-ay-between { 
+	justify-content: space-between;  /* по X с отступами между */
+	align-items: flex-start;  /* по Y вначале */ 
+}  
+/* 11 */
+.mx-center-ay-between { 
+	justify-content: space-between; /* по X с отступами между */
+	align-items: center;  /* по Y вцентре */ 
+}  
+/* 12 */
+.mx-between-ay-end { 
+	justify-content: space-between; /* по X с отступами */
+	align-items: flex-end;  /* по Y вконце */ 
+} 
+/*--------------- СТРОКА 5 --------------------------*/
+/* 13 */
+.mx-start-ay-around { 
+	justify-content: space-around;  /* по X на одинаковом растоянии */
+	align-items: flex-start;  /* по Y вначале */ 
+	} 
+/* 14 */
+.mx-center-ay-around { 
+	justify-content: space-around; /* по X в центре */
+	align-items: center;  /* по Y вцентре */ 
+} 
+/* 15 */
+.mx-around-ay-end { 
+	justify-content: space-around; /* по X с отступами */
+	align-items: flex-end;  /* по Y вконце */ 
+}
+/* Все расположения, где главная ось y, а поперечная ось x обладают свойством flex-flow: column nowrap; */
+.my-start-ax-start,  .my-start-ax-center,  .my-start-ax-end,
+.my-center-ax-start, .my-center-ax-center, .my-center-ax-end, 
+.my-end-ax-start,    .my-end-ax-center,    .my-end-ax-end, 
+.my-between-ax-start, .my-between-ax-center, .my-between-ax-end,
+.my-around-ax-start,  .my-around-ax-center,  .my-around-ax-end{
+	flex-flow: column nowrap; 
+}
+/*--------------- СТРОКА 6 --------------------------*/
+/* 16 */ 
+.my-start-ax-start {   
+							  /* по Y вначале */ 
+	align-items: flex-start;  /* по X вначале */ 
+}
+/* 17 */
+.my-start-ax-center {   
+						  /* по Y вначале */
+	align-items: center;  /* по X вцентре */ 
+}
+/* 18 */
+.my-start-ax-end {  
+							/* по Y вначале */
+	align-items: flex-end;  /* по X вконце */ 
+}
+/*--------------- СТРОКА 7 --------------------------*/
+/* 19 */ 
+.my-center-ax-start {  
+	justify-content: center;  /* по Y вцентре */
+	align-items: flex-start;  /* по X вначале */ 
+}
+/* 20 */
+.my-center-ax-center {  
+	justify-content: center;  /* по Y вцентре */
+	align-items: center;      /* по X вцентре */ 
+}
+/* 21 */
+.my-center-ax-end{  
+	justify-content: center;  /* по Y вцентре */
+	align-items: flex-end;    /* по X вконце */
+}
+/*--------------- СТРОКА 8 --------------------------*/
+/* 22 */  
+.my-end-ax-start {  
+	justify-content: flex-end;  /* по Y вконце */
+	align-items: flex-start;    /* по X вначале */
+}
+/* 23 */
+.my-end-ax-center {  
+	justify-content: flex-end;  /* по Y вконце */
+	align-items: center;   		/* по X вцентре */
+}
+/* 24 */
+.my-end-ax-end{  
+	justify-content: flex-end;  /* по Y вконце */
+	align-items: flex-end;  	/* по X вконце */ 
+}  
+
+/*--------------- СТРОКА 9 --------------------------*/
+/* 25 */  
+.my-between-ax-start {  
+	justify-content: space-between;  /* по Y равномерное распределение с прижатием крайних элементов к краям */
+	align-items: flex-start;    	 /* по X вначале */
+}
+/* 26 */
+.my-between-ax-center {  
+	justify-content: space-between;  /* по Y равномерное распределение с прижатием крайних элементов к краям */
+	align-items: center;   			 /* по X вцентре */
+}
+/* 27 */
+.my-between-ax-end{  
+	justify-content: space-between;  /* по Y равномерное распределение с прижатием крайних элементов к краям */
+	align-items: flex-end;  		 /* по X вконце */ 
+}
+/*--------------- СТРОКА 10 --------------------------*/
+/* 28 */  
+.my-around-ax-start {  
+	justify-content: space-around;  /* по Y равномерное распределение с одинаковым пространством вокруг каждого элемента */
+	align-items: flex-start;    	/* по X вначале */
+}
+/* 29 */
+.my-around-ax-center {  
+	justify-content: space-around;  /* по Y равномерное распределение с одинаковым пространством вокруг каждого элемента */
+	align-items: center;   			/* по X вцентре */
+}
+/* 30 */
+.my-around-ax-end{  
+	justify-content: space-around;  /* по Y равномерное распределение с одинаковым пространством вокруг каждого элемента */
+	align-items: flex-end;  		/* по X вконце */ 
+}
+ /*-----------------------------------------*/ 
+.w100{
+	width:100%;  /*100% экрана - компенсация padding  calc( 100% - 16px);*/
+}
+.h100{
+	height:100%;
+}
+.wrap{
+	flex-wrap: 	wrap; /* элементы переносятся на новую строку при необходимости */ 
+}
