@@ -1,0 +1,522 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!-- Кодировка -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<!-- width=device-width: Устанавливает ширину области отображения (viewport) равной ширине экрана в CSS-пикселях*/-->
+		<!-- initial-scale=1: Задает исходный масштаб страницы при загрузке (100% без приближения или отдаления)--> 
+		<title>Homework for Sveak | Part 1</title>
+		<meta name="description" content="Тестовое задание для компании Sveak" />
+		<meta name="keywords" content="web design, grid, hover effect, thumbnail, transition" />
+		<meta name="author" content="Bujanov Maksim" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+		<!-- СТИЛИ --> 
+		<link rel="stylesheet" type="text/css" href="css/position.css"> <!-- сетка позиционирования объектов см в примере positiions.html --> 
+		<link rel="stylesheet" type="text/css" href="css/style.css">    <!-- общие стили -->
+		<link rel="stylesheet" type="text/css" href="css/burger.css">   <!-- общие стили -->
+		<link rel="stylesheet" type="text/css" href="css/set1.css" />	<!-- набор оформление боксов 1 -->
+		<link rel="stylesheet" type="text/css" href="css/set2.css" />  	<!-- набор оформление боксов 2 -->
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+	</head>
+<body> 
+	<!-- расположение по Y Главное меню, Контент и ФУТЕР -->
+	<div class="my-between-ax-center w100" style="height:100vh; width:calc(100%-16px);">
+		<!-- Главное меню -->
+		<div class="main-menu w100 mx-center-ay-between wrap" style="height:15vh;"> 
+			<div>
+				<!-- Hidden Checkbox to Control Menu -->
+				<input type="checkbox" id="burger-toggle">
+				<!-- Burger Icon -->
+				<label for="burger-toggle" class="burger-container">
+					<div class="burger-line"></div>
+					<div class="burger-line"></div>
+					<div class="burger-line"></div>
+				</label>
+				<!-- Navigation Menu start -->
+				<nav class="nav-menu">
+					<ul>
+					  <li><a href="#home">Главная</a></li>
+					  <li><a href="#about">О компании</a></li>
+					  <li><a href="#catalog">Каталог</a></li>
+					  <li><a href="#portfolio">Портфолио</a></li>
+					  <li><a href="#contact">Контакты</a></li>
+					  
+					  <li><a href="#shops">Магазины</a></li>
+					  <li><a href="#delivery">Доставка</a></li>
+					  <li><a href="#favorites">Избранное</a></li>
+					  <li><a href="#cart">Корзина</a></li>
+					  <li><a href="#login">Войти</a></li>
+					  
+					  <li><a href="#news">Новости</a></li>
+					  <li><a href="#service">Сервис</a></li>
+					  <li><a href="#help">Помощь</a></li>
+					  <li><a href="faq">Справка</a></li>
+					  <li><a href="#video">Видео</a></li>
+					</ul>
+				</nav>
+				<!-- Navigation Menu end -->
+			</div>
+			<div >
+				<img src="ICO/play.svg" class="ico-menu">
+				<img src="ICO/Circle.svg" class="ico-menu">
+				<img src="ICO/kvadrat.svg" class="ico-menu">
+			</div>
+		</div>  
+		<!-- Контент -->
+		<div class="mx-start content w100" style="height:70vh;"> 
+			<!--div class="flex-box box"> 
+				Хедер при скролле «прилипает» к верху страницы;
+				Анимированное открытие меню;
+				Контент под меню не должен скроллиться;
+				Анимация изменения состояния бургера;
+				Карточки по ширине могут меняться от 115 до 150;
+				Отступы между карточками не меняются;
+				Футер в потоке.
+			</div-->
+			<!-- 1 Lily -->
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-lily">
+						<img src="img/kamchatka360.jpg" alt="img12"/>
+						<figcaption>
+							<div>
+								<h2>Отдых на<span> Камчатке</span></h2>
+								<p style="text-stroke: 2px red;"><B>Величественные вулканы, горячие источники и красота дикой природы
+								Величественные вулканы, горячие источники и красота дикой природы
+								Величественные вулканы, горячие источники и красота дикой природы</B>
+								</p>
+							</div>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure> 
+				</div>
+			</div>
+			<!-- 2 Sadie -->
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-sadie">
+						<img src="img/2.jpg" alt="img02"/>
+						<figcaption>
+							<h2>Серфинг в <span>Австралии</span></h2>
+							<p>Солёный ветер, мощные волны и чувство свободы.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure> 
+				</div> 
+			</div> 
+			<!-- 3 Honey -->
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-honey">
+						<img src="img/26.jpg" alt="img26"/>
+						<figcaption>
+							<h2>Фьорды <span>Норвегии</span> <i></i></h2> 
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div>
+			<!-- 4 Layla -->
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-layla">
+						<img src="img/zanzibar.jpg" alt="img06"/>
+						<figcaption>
+							<h2>Пляжи <span>Занзибара</span></h2>
+							<p>Белоснежный песок, бирюзовые волны, воплощение тропической мечты.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure> 
+				</div>
+			</div>
+			<!-- 5 Zoe -->
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-zoe">
+						<img src="img/hain360.jpg" alt="img25"/>
+						<figcaption>
+							<h2>Остров <span>Хайнань</span></h2>
+							<p class="icon-links">
+								<a href="#"><span class="icon-heart"></span></a>
+								<a href="#"><span class="icon-eye"></span></a>
+								<a href="#"><span class="icon-paper-clip"></span></a>
+							</p>
+							<p class="description">
+							Хайнань – единственный остров с тропическим климатом на территории КНР. 
+							Его даже называют «Восточными Гавайами»
+							</p>
+						</figcaption>			
+					</figure> 
+				</div>
+			</div> 
+			<!-- 6 Oscar --> 
+			<div class="flex-box box ">
+				<div class="grid">
+					<figure class="effect-oscar">
+						<img src="img/thailand360.jpg" alt="img10"/>
+						<figcaption>
+							<h2>Теплый <span>Тайланд</span></h2>
+							<p>Красочная природа, ласковое море, тихая расслабленная атмосфера.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure> 
+				</div>
+			</div>
+			<!-- 7 Marley --> 
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-marley">
+						<img src="img/monastiri-meteori360.jpg" alt="img11"/>
+						<figcaption>
+							<h2>Великий <span>Метеор</span></h2>							  							
+							  <p>крупнейший и самый старый монастырь, основанный в 14 веке.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure> 
+				</div> 
+			</div> 
+			<!-- 8 Ruby --> 
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-ruby">
+						<img src="img/dzip360.jpg" alt="img13"/>
+						<figcaption>
+							<h2> Джип-тур <span>Грузия</span></h2>
+							<p>Захватывающие перевалы, горные панорамы и дух приключний.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure> 
+				</div>
+			</div>
+			<!-- 9 Roxy --> 
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-roxy">
+						<img src="img/Sankt-Peterburg360.jpg" alt="img15"/>
+						<figcaption>
+							<h2>Роскошный <span>«Петергоф»</span></h2>
+							<p>огромный зеленый парк, где можно любоваться фонтанами и каскадами, 
+							скульптурами, дворцами и Финским заливом
+							</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure> 
+				</div>
+			</div> 
+			<!-- 10 Bubba --> 
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-bubba">
+						<img src="img/Kappadokija.jpg" alt="imgКаппадокия"/>
+						<figcaption>
+							<h2>Полеты в <span>Каппадокии</span></h2>
+							<p>Ощущение невесомости и рассвет над скалами.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div>
+			<!-- 11 Romeo --> 
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-romeo">
+						<img src="img/Raft_Gruzia360.jpg" alt="img17"/>
+						<figcaption>
+							<h2>Рафты на <span>Алтае</span></h2>
+							<p>Любителям экстремальных ощущений, обязательно стоит сплавиться по Катуни.
+							</p>							
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure> 
+				</div>
+			</div>
+			<!-- 12 Dexter --> 
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-dexter">
+						<img src="img/Kazino360.jpg" alt="img19"/>
+						<figcaption>
+							<h2>Алтай  <span>Palace</span></h2>
+							<p>Первое официальное казино в Сибири</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure> 
+				</div>
+			</div> 
+			<!-- 13 Sarah -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-sarah">
+						<img src="img/tbilisoba-wine-festival360.jpg" alt="img20"/>
+						<figcaption>
+							<h2>Винный фестиваль в <span>Тбилиси</span></h2>
+							<p>Праздник с 10 летней историей, 60 сортов вина за один день</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div>
+			<!-- 14 Chico -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-chico">
+						<img src="img/GrelkaFest360.jpg" alt="img04"/>
+						<figcaption>
+							<h2>Grelka <span>Fest</span></h2>
+							<p>фестиваль на популярном горнолыжном курорте Шерегеша.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div> 
+			<!-- 15 Milo -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-milo">
+						<img src="img/Egypt360.jpg" alt="img03"/>
+						<figcaption>
+							<h2>Шарм-эль-Шейх в <span>Египте</span></h2>
+							<p>«Залив шейха», популярен среди золотой молодежи и для любителей роскоши и комфорта
+							</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div>
+			<!-- 16 Julia -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-julia">
+						<img src="img/Grand_Maket360.jpg" alt="img22"/>
+						<figcaption>
+							<h2><span>Гранд Макет</span></h2><div>
+								<p>самый большой макет в мире 800 квадратных метров.</p>
+								<p>14 регионов от Калининграда до Дальнего Востока</p>
+								<p>Стоимость взрослого билета 1000 руб</p>
+							</div>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div>
+			<!-- 17 Goliath -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-goliath">
+						<img src="img/Moskva360.jpg" alt="img24"/>
+						<figcaption>
+							<h2>Tур по <span>Москве</span></h2>
+							<p>Семь прогулочных маршрутов по ночной Москве.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div> 
+			<!-- 18 Hera -->
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-hera">
+						<img src="img/Rekonstrukciya360.jpg" alt="img17"/>
+						<figcaption>
+							<h2>Реконструкция <span>Битвы крестоносцев</span></h2>
+							<p>
+								<a href="#"><i class="fa fa-fw fa-file-pdf-o"></i></a>
+								<a href="#"><i class="fa fa-fw fa-file-image-o"></i></a>
+								<a href="#"><i class="fa fa-fw fa-file-archive-o"></i></a>
+								<a href="#"><i class="fa fa-fw fa-file-code-o"></i></a>
+							</p>
+						</figcaption>			
+					</figure> 
+				</div>
+			</div>
+			<!-- 19 Winston -->
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-winston">
+						<img src="img/SnowKaiting360.jpg" alt="img30"/>
+						<figcaption>
+							<h2>Обучение <span>сноукаитингу</span></h2>
+							<p>
+								<a href="#"><i class="fa fa-fw fa-star-o"></i></a>
+								<a href="#"><i class="fa fa-fw fa-comments-o"></i></a>
+								<a href="#"><i class="fa fa-fw fa-envelope-o"></i></a>
+							</p>
+						</figcaption>			
+					</figure> 
+				</div>
+			</div> 
+			<!-- 20 Selena -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-selena">
+						<img src="img/rodelban-krasnoyarsk360.jpg" alt="img31"/>
+						<figcaption>
+							<h2>Красноярский <span>Родельбан</span></h2>
+							<p>Самый длинный в России и второй в мире – протяжность 3,4 км</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div>
+			<!-- 21 Terry -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-terry">
+						<img src="img/fifa-champ-360.jpg" alt="img26"/>
+						<figcaption>
+							<h2>«Зенит» - «Ростов» на <span>«Газпром Арене»</span></h2>
+							<p>
+								<a href="#"><i class="fa fa-fw fa-download"></i></a>
+								<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								<a href="#"><i class="fa fa-fw fa-share"></i></a>
+								<a href="#"><i class="fa fa-fw fa-tags"></i></a>
+							</p>
+						</figcaption>			
+					</figure>
+				</div>
+			</div>
+			<!-- 22 Phoebe -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-phoebe">
+						<img src="img/Elbrus360.jpg" alt="img07"/>
+						<figcaption>
+							<h2>Восхождение на <span>Эльбрус</span></h2>
+							<p>
+								<a href="#"><i class="fa fa-fw fa-user"></i></a>
+								<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								<a href="#"><i class="fa fa-fw fa-cog"></i></a>
+							</p>
+						</figcaption>			
+					</figure>
+				</div>
+			</div> 
+			<!-- 23 Apollo -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-apollo">
+						<img src="img/metallica_world_tour360.jpg" alt="img22"/>
+						<figcaption>
+							<h2>World tour <span>Metallica</span></h2>
+							<p></p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div>
+			<!-- 24 Kira -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-kira">
+						<img src="img/snow360.jpg" alt="img05"/>
+						<figcaption>
+							<h2>Кицбюэль <span>Австрия</span></h2>
+							<p>
+								<a href="#"><i class="fa fa-fw fa-home"></i></a>
+								<a href="#"><i class="fa fa-fw fa-download"></i></a>
+								<a href="#"><i class="fa fa-fw fa-heart"></i></a>
+								<a href="#"><i class="fa fa-fw fa-share"></i></a>
+							</p>
+						</figcaption>			
+					</figure>
+				</div>
+			</div> 
+			<!-- 25 Steve -->	
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-steve">
+						<img src="img/Neuschwanstein360.jpg" alt="img33"/>
+						<figcaption>
+							<h2>Нойшванштайн <span></span></h2>
+							<p>сказочный замок XIX века, построенный королем Людвигом II</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div>
+			<!-- 26 Moses -->
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-moses">
+						<img src="img/mma-abu-dabi360.jpg" alt="img24"/>
+						<figcaption>
+							<h2>MMA333 <span>Абу-Даби</span></h2>
+							<p>Джастин Гейджи vs Дастин Порье.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure> 
+				</div>
+			</div>
+			<!-- 27 Jazz -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-jazz">
+						<img src="img/mechet360.jpg" alt="img29"/>
+						<figcaption>
+							<h2>Арабские  <span>Эмираты</span></h2> 
+							<p>Мечеть Шейха Заида</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div> 
+			
+			<!-- 28 Ming -->
+			<div class="flex-box box">
+				<div class="grid">
+					<figure class="effect-ming">
+						<img src="img/teleckoe.jpg" alt="img09"/>
+						<figcaption>
+							<h2>Алтайский <span> заповедник</span></h2>
+							<p>- это Телецое озеро, горные реки и водопады, настоящая дикая тайга.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div>
+			<!-- 29 Lexi -->
+			<div class="flex-box box">
+				<div class="grid"> 
+					<figure class="effect-lexi">
+						<img src="img/nissan360.jpg" alt="img03"/>
+						<figcaption>
+							<h2>Турнир <span>Drag Wars</span></h2>
+							<p>Запредельные скорости и невероятные автомобили – в гонке по прямой на 402 метра</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div>
+			</div> 
+			<!-- 30 Duke -->
+			<div class="grid">
+				<figure class="effect-duke">
+					<img src="img/black_sea360.jpg" alt="img27"/>
+					<figcaption>
+						<h2>отдых на <span>Черном море</span></h2>
+						<p>
+						Любимый курорт в Анапе и Геленджике с чистейшей морской водой </p>
+						<a href="#">View more</a>
+					</figcaption>			
+				</figure> 
+			</div>
+		</div>
+		<!-- ФУТЕР -->
+		<div class="footer" style="height:15vh;">
+			<!--h2>Заголовок2</h2>
+			<h3>Заголовок3</h3>
+			<h4>Заголовок4</h4-->
+			<p>What is Lorem Ipsum? 
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+			has been the industry's standard dummy text ever since the 1500s, when an unknown 
+			printer took a galley of type and scrambled it to make a type specimen book. 
+			It has survived not only five centuries, but also the leap into electronic typesetting, 
+			remaining essentially unchanged. It was popularised in the 1960s with the release of 
+			Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+			publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</p>
+		</div>
+	</div>
+ </body>
+</html>
